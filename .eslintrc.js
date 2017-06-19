@@ -18,7 +18,6 @@ module.exports = {
     "plugins": [
         "react"
     ],
-    "extends": "eslint:recommended",
     "rules": {
         "indent": [
             "error",
@@ -66,8 +65,6 @@ module.exports = {
                 'everything-else'
             ]
         } ],
-        "react/no-is-mounted": 2,
-        "react/no-string-refs": 2,
         "react/prefer-es6-class": 2,
         "react/prefer-stateless-function": 2,
         "react/self-closing-comp": 2,
@@ -99,14 +96,12 @@ module.exports = {
         "react/jsx-no-bind": 2,
         "react/jsx-uses-vars": 2,
         "react/jsx-uses-react": 2,
-        "react/jsx-tag-spacing": 2,
         "react/jsx-no-undef": 2,
         "react/jsx-no-literals": 2,
         "react/jsx-no-duplicate-props": 2,
         "react/jsx-no-comment-textnodes": 2,
         "react/jsx-max-props-per-line": 2,
         "react/jsx-key": 2,
-        "react/jsx-indent-props": 2,
         "react/jsx-indent": 2,
         "react/jsx-handler-names": 2,
         "react/jsx-first-prop-new-line": 2,
