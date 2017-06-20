@@ -1,6 +1,7 @@
 import {
     DATA,
     OPEN,
+    acknowledge,
     loadComments,
     openComments
 } from "../ducks/comments";
@@ -19,7 +20,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return bindActionCreators({
         loadComments,
-        openComments
+        openComments,
+        acknowledge
     }, dispatch);
 };
 

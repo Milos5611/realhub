@@ -5,9 +5,12 @@ import axios from "axios";
 
 const LOADED_COMMEND_DATA_SUCCESSFUL = "LOADED_COMMEND_DATA_SUCCESSFUL";
 const OPEN_HIDE_COMMENT = "OPEN_HIDE_COMMENT";
+const SET_ACKNOWLEDGE = "SET_ACKNOWLEDGE";
 
 export const DATA = "data";
 export const OPEN = "open";
+export const ACKNOWLEDGE = "acknowledge";
+export const COMMENT_ID = "comment_id";
 
 export const initialState = {
     [DATA]: null,
@@ -30,6 +33,12 @@ export default function reducer(state = initialState, action) {
                 [OPEN]: action[OPEN]
             };
             break;
+        case SET_ACKNOWLEDGE:
+            newState = {
+                ...state,
+                [ACKNOWLEDGE]: true
+            };
+            break;
         default:
             newState = {
                 ...state
@@ -44,6 +53,20 @@ export function loadComments() {
         axios.get("../comment_data.json").then(response => {
             dispatch(loadCommentsSuccessful(response));
         });
+    };
+}
+
+export function acknowledge(id) {
+    return (dispatch, getState) => {
+        const comment = getState().comments.data.filter(d => d.artwork_id === id);
+        dispatch(milos(comment));
+    };
+}
+
+function milos(id) {
+    return {
+        [TYPE_KEY]: SET_ACKNOWLEDGE,
+        [COMMENT_ID]: id
     };
 }
 

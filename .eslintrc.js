@@ -6,7 +6,7 @@ module.exports = {
         "mocha": true,
         "node": true
     },
-    "extends": [ "eslint:recommended", "plugin:react/recommended" ],
+    "extends": ["eslint:recommended", "plugin:react/recommended"],
     "parser": "babel-eslint",
     "parserOptions": {
         "ecmaFeatures": {
@@ -38,13 +38,13 @@ module.exports = {
             "error",
             "always"
         ],
-        "sort-imports": [ "error", {
+        "sort-imports": ["error", {
             "ignoreCase": false,
             "ignoreMemberSort": false,
-            "memberSyntaxSortOrder": [ "none", "all", "multiple", "single" ]
-        } ],
-        "jsx-quotes": [ "error", "prefer-double" ],
-        "no-var": [ "error" ],
+            "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
+        }],
+        "jsx-quotes": ["error", "prefer-double"],
+        "no-var": ["error"],
         "array-callback-return": 2,
         "curly": 2,
         "default-case": 2,
@@ -55,7 +55,7 @@ module.exports = {
         "no-multi-spaces": 2,
         "react/no-multi-comp": 2,
         "react/require-render-return": 2,
-        "react/sort-comp": [ 2, {
+        "react/sort-comp": [2, {
             order: [
                 'static-methods',
                 'lifecycle',
@@ -64,7 +64,7 @@ module.exports = {
                 'render',
                 'everything-else'
             ]
-        } ],
+        }],
         "react/prefer-es6-class": 2,
         "react/prefer-stateless-function": 2,
         "react/self-closing-comp": 2,
@@ -93,7 +93,6 @@ module.exports = {
         "react/jsx-closing-bracket-location": 2,
         "react/jsx-boolean-value": 2,
         "react/jsx-wrap-multilines": 2,
-        "react/jsx-no-bind": 2,
         "react/jsx-uses-vars": 2,
         "react/jsx-uses-react": 2,
         "react/jsx-no-undef": 2,
@@ -107,6 +106,5 @@ module.exports = {
         "react/jsx-first-prop-new-line": 2,
         "react/jsx-equals-spacing": 2,
         "react/jsx-curly-spacing": 2,
-
     }
 };
