@@ -1,6 +1,17 @@
 export const TYPE_KEY = "type";
+export const EMPTY = 0;
 export const style = {
-    button: {
-        margin: 12
+    buttons: {
+        margin: 5
+    },
+    buttonSubmit: {
+        padding: 12
+    },
+    paper: {
+        height: 100,
+        width: 100,
+        margin: 20,
+        textAlign: "center",
+        display: "inline-block"
     }
 };

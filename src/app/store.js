@@ -1,5 +1,5 @@
 import { applyMiddleware, combineReducers, createStore } from "redux";
-import comments from "../ducks/comments";
+import comments from "../services/comments";
 import thunk from "redux-thunk";
 
 const reducers = {
@@ -7,9 +7,9 @@ const reducers = {
 };
 
 const logger = store => next => action => {
-    
+
     let result = next(action);
-    
+
     if ( process.env.NODE_ENV !== "production" ) {
         /* eslint-disable */
         console.group(action.type);

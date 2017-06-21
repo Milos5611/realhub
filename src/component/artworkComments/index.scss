@@ -1,12 +1,10 @@
 .cards-wrapper {
     width: 44%;
     margin: 0 auto;
-    .button-wrapper {
-
-    }
     .card {
         &.open {
             display: block;
+            margin: 0 13px;
         }
 
         &.closed {
