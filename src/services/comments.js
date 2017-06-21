@@ -52,7 +52,7 @@ export default function reducer( state = initialState, action ) {
 
 export function loadComments() {
     return ( dispatch ) => {
-        axios.get("../comment_data.json").then(response => {
+        axios.get("api/comment_data.json").then(response => {
             dispatch(loadCommentsSuccessful(response));
         });
     };

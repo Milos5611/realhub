@@ -12,13 +12,10 @@
         "npm": ">=3.8"
     },
     "scripts": {
-        "start": "webpack-dev-server --config webpack.config.js --hot --progress --inline --colors",
-        "build": "webpack --config webpack-production.config.js --progress --colors --display-error-details",
-        "test": "jest"
-    },
-    "jest": {
-        "verbose": true,
-        "testResultsProcessor": "./node_modules/jest-bamboo-formatter"
+        "dev": "webpack-dev-server --config webpack.config.js --hot --progress --inline --colors",
+        "build": "webpack --config webpack.config.js --progress --colors --display-error-details",
+        "postinstall": "gulp production",
+        "start": "node server.js"
     },
     "dependencies": {
         "axios": "^0.16.2",
@@ -54,6 +51,7 @@
         "babel-preset-latest": "6.24.0",
         "babel-preset-react": "6.23.0",
         "babel-preset-stage-1": "6.22.0",
+        "copy-webpack-plugin": "^4.0.1",
         "css-loader": "0.27.3",
         "ejs": "2.5.6",
         "eslint": "3.18.0",
@@ -81,6 +79,7 @@
         "react-hot-loader": "3.0.0-beta.2",
         "sass-loader": "6.0.5",
         "style-loader": "0.14.1",
+        "transfer-webpack-plugin": "^0.1.4",
         "url-loader": "0.5.8",
         "webpack": "2.6.0",
         "webpack-dev-server": "2.4.5"

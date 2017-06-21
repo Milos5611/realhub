@@ -2,6 +2,7 @@ const webpack = require("webpack");
 const path = require("path");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const TransferWebpackPlugin = require("transfer-webpack-plugin");
 
 const config = {
     // Entry points to the project
@@ -71,6 +72,9 @@ const config = {
             filename: "app-[hash].css",
             allChunks: true,
         }),
+        new TransferWebpackPlugin([
+            { from: "api", to:"api"},
+        ], path.resolve(__dirname)),
         // I add esj template as it is easier to add hashed js and css
         // also think to move title to package.json
         new HtmlWebpackPlugin({

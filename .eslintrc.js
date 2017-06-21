@@ -50,7 +50,6 @@ module.exports = {
         "default-case": 2,
         "eqeqeq": 2,
         "no-empty-function": 2,
-        "no-magic-numbers": 2,
         "no-param-reassign": 2,
         "no-multi-spaces": 2,
         "react/no-multi-comp": 2,

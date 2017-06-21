@@ -186,6 +186,7 @@ $RECYCLE.BIN/
 .vscode/launch.json
 
 ### Yarn ###
+yarn.lock
 .yarnclean
 yarn-debug.log
 yarn-error.log
